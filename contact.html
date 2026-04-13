@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - D.M. Travels & Tours</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2 cursor-pointer">
+                    <i class="fas fa-globe text-2xl gradient-primary bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"></i>
+                    <span class="text-xl font-bold text-gray-900">D.M. Travels</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-purple-600 transition font-500">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-purple-600 transition font-500">Services</a>
+                    <a href="destinations.html" class="text-gray-700 hover:text-purple-600 transition font-500">Destinations</a>
+                    <a href="about.html" class="text-gray-700 hover:text-purple-600 transition font-500">About</a>
+                    <a href="contact.html" class="text-purple-600 font-bold">Contact</a>
+                </div>
+                
+                <button @click="open = !open" class="md:hidden">
+                    <i class="fas fa-bars text-2xl text-gray-900"></i>
+                </button>
+            </div>
+            
+            <div x-show="open" class="md:hidden pb-4 border-t border-gray-200">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">Services</a>
+                <a href="destinations.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">Destinations</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">About</a>
+                <a href="contact.html" class="block py-2 text-purple-600 font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 gradient-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
+                <p class="text-xl text-purple-100 max-w-2xl mx-auto">
+                    Have questions? We'd love to hear from you. Get in touch with our team today.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">Contact Information</h2>
+                    
+                    <!-- Address -->
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
+                        <div class="flex items-start space-x-6 mb-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Address</h3>
+                                <address class="text-gray-700 not-italic">
+                                    D.M. Travels and Tours Pvt. Ltd.<br>
+                                    Kathmandu<br>
+                                    Nepal
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8">
+                        <div class="flex items-start space-x-6 mb-4">
+                            <div class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Phone</h3>
+                                <p class="text-gray-700">
+                                    <a href="tel:+9779764337631" class="hover:text-green-600 font-bold">+977 9764337631</a>
+                                </p>
+                                <p class="text-gray-600 text-sm mt-2">Available 24/7 for inquiries</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
+                        <div class="flex items-start space-x-6 mb-4">
+                            <div class="w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Email</h3>
+                                <p class="text-gray-700">
+                                    <a href="mailto:info.dmtravels@gmail.com" class="hover:text-blue-600 font-bold">info.dmtravels@gmail.com</a>
+                                </p>
+                                <p class="text-gray-600 text-sm mt-2">We'll respond within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp -->
+                    <div class="bg-gradient-to-br from-green-100 to-green-50 rounded-2xl p-8 border-2 border-green-500">
+                        <div class="flex items-start space-x-6 mb-4">
+                            <div class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">WhatsApp</h3>
+                                <p class="text-gray-700">
+                                    <a href="https://wa.me/9779764337631" target="_blank" class="hover:text-green-600 font-bold">+977 9764337631</a>
+                                </p>
+                                <p class="text-gray-600 text-sm mt-2">Quick messages and instant support</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Office Hours -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Office Hours</h3>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>Sunday - Friday: 9:00 AM - 6:00 PM</li>
+                                    <li>Saturday: 10:00 AM - 5:00 PM</li>
+                                    <li>24/7 Emergency Support Available</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl p-10 shadow-lg border-2 border-gray-200" x-data="{ submitted: false, formData: { name: '', email: '', phone: '', destination: '', message: '' } }">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+                    
+                    <form @submit.prevent="submitted = true" class="space-y-6">
+                        <!-- Name -->
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Full Name <span class="text-red-500">*</span></label>
+                            <input 
+                                type="text" 
+                                x-model="formData.name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                                placeholder="John Doe" 
+                                required>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Email Address <span class="text-red-500">*</span></label>
+                            <input 
+                                type="email" 
+                                x-model="formData.email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                                placeholder="your@email.com" 
+                                required>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Phone Number <span class="text-red-500">*</span></label>
+                            <input 
+                                type="tel" 
+                                x-model="formData.phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                                placeholder="+977 98XXXXXXXX" 
+                                required>
+                        </div>
+                        
+                        <!-- Destination -->
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Interested Destination</label>
+                            <select 
+                                x-model="formData.destination"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                <option value="">Select a destination</option>
+                                <option value="nepal">Nepal</option>
+                                <option value="thailand">Thailand</option>
+                                <option value="india">India</option>
+                                <option value="maldives">Maldives</option>
+                                <option value="bali">Bali</option>
+                                <option value="vietnam">Vietnam</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Message -->
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Your Message <span class="text-red-500">*</span></label>
+                            <textarea 
+                                x-model="formData.message"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent h-32 resize-none" 
+                                placeholder="Tell us about your travel plans and requirements..." 
+                                required></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button 
+                            type="submit" 
+                            class="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold hover:shadow-lg transition text-lg">
+                            Send Message
+                        </button>
+                        
+                        <!-- Success Message -->
+                        <div x-show="submitted" x-cloak class="p-4 bg-green-100 border-2 border-green-500 text-green-700 rounded-lg text-center font-bold">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            Thank you! We've received your message. Our team will contact you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quick Contact CTA -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Contact Methods</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Call -->
+                <a href="tel:+9779764337631" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition text-center">
+                    <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Call Us</h3>
+                    <p class="text-purple-600 font-bold text-lg mb-4">+977 9764337631</p>
+                    <button class="px-6 py-2 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition">
+                        Call Now
+                    </button>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/9779764337631" target="_blank" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition text-center">
+                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">WhatsApp</h3>
+                    <p class="text-green-600 font-bold text-lg mb-4">Chat with us instantly</p>
+                    <button class="px-6 py-2 bg-green-500 text-white rounded-full font-bold hover:bg-green-600 transition">
+                        Message Now
+                    </button>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:info.dmtravels@gmail.com" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition text-center">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Email</h3>
+                    <p class="text-blue-600 font-bold text-lg mb-4">info.dmtravels@gmail.com</p>
+                    <button class="px-6 py-2 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition">
+                        Email Now
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-3 z-40">
+        <a href="https://wa.me/9779764337631?text=Hello%20D.M.%20Travels,%20I%20would%20like%20to%20get%20more%20information" 
+           target="_blank" 
+           class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition transform hover:scale-110"
+           title="WhatsApp">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="tel:+9779764337631" 
+           class="w-14 h-14 bg-purple-600 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-purple-700 transition transform hover:scale-110"
+           title="Call Us">
+            <i class="fas fa-phone text-2xl"></i>
+        </a>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-globe text-2xl text-purple-500"></i>
+                        <span class="text-xl font-bold">D.M. Travels</span>
+                    </div>
+                    <p class="text-gray-400">Making travel dreams come true since 2009.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="destinations.html" class="hover:text-white transition">Destinations</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition">Flight Booking</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Hotel Booking</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Tour Packages</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Visa Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow & Contact Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/9779764337631" target="_blank" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+9779764337631" class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-700 transition" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:info.dmtravels@gmail.com" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="text-center text-gray-400">
+                    <p>&copy; 2024 D.M. Travels & Tours Pvt. Ltd. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

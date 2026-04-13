@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Destinations - D.M. Travels & Tours</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2 cursor-pointer">
+                    <i class="fas fa-globe text-2xl gradient-primary bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"></i>
+                    <span class="text-xl font-bold text-gray-900">D.M. Travels</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-purple-600 transition font-500">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-purple-600 transition font-500">Services</a>
+                    <a href="destinations.html" class="text-purple-600 font-bold">Destinations</a>
+                    <a href="about.html" class="text-gray-700 hover:text-purple-600 transition font-500">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition font-500">Contact</a>
+                </div>
+                
+                <button @click="open = !open" class="md:hidden">
+                    <i class="fas fa-bars text-2xl text-gray-900"></i>
+                </button>
+            </div>
+            
+            <div x-show="open" class="md:hidden pb-4 border-t border-gray-200">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">Services</a>
+                <a href="destinations.html" class="block py-2 text-purple-600 font-bold">Destinations</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">About</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-purple-600 font-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 gradient-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Popular Destinations</h1>
+                <p class="text-xl text-purple-100 max-w-2xl mx-auto">
+                    Explore breathtaking places around the world and create unforgettable memories
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Destinations Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- Nepal -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop" alt="Nepal" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-3">Nepal</h3>
+                        <p class="text-purple-600 text-sm font-bold mb-4">Mountain Paradise</p>
+                        <p class="text-gray-600 mb-6">
+                            Experience the majestic Himalayas, ancient temples, and rich cultural heritage. From trekking to spiritual journeys, Nepal offers unforgettable adventures.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <p class="text-gray-700"><strong>Best Time:</strong> September - November & March - May</p>
+                            <p class="text-gray-700"><strong>Highlights:</strong> Mount Everest, Pokhara, Kathmandu, Trekking</p>
+                            <p class="text-gray-700"><strong>Duration:</strong> 5-14 days</p>
+                        </div>
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:shadow-lg transition">
+                            Inquire Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Thailand -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1508280828343-9285afc6e622?w=500&h=400&fit=crop" alt="Thailand" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-3">Thailand</h3>
+                        <p class="text-purple-600 text-sm font-bold mb-4">Tropical Dreams</p>
+                        <p class="text-gray-600 mb-6">
+                            Discover pristine beaches, vibrant street food, ancient temples, and warm hospitality. Thailand blends adventure with relaxation perfectly.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <p class="text-gray-700"><strong>Best Time:</strong> November - February</p>
+                            <p class="text-gray-700"><strong>Highlights:</strong> Bangkok, Phuket, Krabi, Island Hopping</p>
+                            <p class="text-gray-700"><strong>Duration:</strong> 7-10 days</p>
+                        </div>
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:shadow-lg transition">
+                            Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- India -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&h=400&fit=crop" alt="India" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-3">India</h3>
+                        <p class="text-purple-600 text-sm font-bold mb-4">Spiritual Journey</p>
+                        <p class="text-gray-600 mb-6">
+                            From the iconic Taj Mahal to spiritual cities, colorful festivals, and diverse landscapes. India is a sensory feast of culture and history.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <p class="text-gray-700"><strong>Best Time:</strong> October - March</p>
+                            <p class="text-gray-700"><strong>Highlights:</strong> Taj Mahal, Varanasi, Goa, Jaipur</p>
+                            <p class="text-gray-700"><strong>Duration:</strong> 8-15 days</p>
+                        </div>
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:shadow-lg transition">
+                            Inquire Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Maldives -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1529788295167-bde0d9758c4e?w=500&h=400&fit=crop" alt="Maldives" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-3">Maldives</h3>
+                        <p class="text-purple-600 text-sm font-bold mb-4">Island Paradise</p>
+                        <p class="text-gray-600 mb-6">
+                            Crystal-clear waters, overwater bungalows, and world-class diving. The Maldives is the ultimate tropical paradise experience.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <p class="text-gray-700"><strong>Best Time:</strong> November - April</p>
+                            <p class="text-gray-700"><strong>Highlights:</strong> Malé, Water Sports, Diving, Resort Islands</p>
+                            <p class="text-gray-700"><strong>Duration:</strong> 5-7 days</p>
+                        </div>
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:shadow-lg transition">
+                            Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Destinations -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bali -->
+                <div class="card-hover bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1537225228614-b4ac326bbf15?w=400&h=300&fit=crop" alt="Bali" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Bali</h3>
+                        <p class="text-gray-600 mb-4">Temples, beaches, and vibrant culture combining spirituality with modern comfort.</p>
+                        <a href="contact.html" class="text-purple-600 font-bold flex items-center space-x-2 hover:space-x-4 transition">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Vietnam -->
+                <div class="card-hover bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop" alt="Vietnam" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Vietnam</h3>
+                        <p class="text-gray-600 mb-4">Ha Long Bay, Ho Chi Minh City, and authentic street food experiences await.</p>
+                        <a href="contact.html" class="text-purple-600 font-bold flex items-center space-x-2 hover:space-x-4 transition">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Cambodia -->
+                <div class="card-hover bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=400&h=300&fit=crop" alt="Cambodia" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Cambodia</h3>
+                        <p class="text-gray-600 mb-4">Angkor Wat temples, floating villages, and rich Khmer heritage.</p>
+                        <a href="contact.html" class="text-purple-600 font-bold flex items-center space-x-2 hover:space-x-4 transition">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="gradient-primary py-16 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Visit Your Dream Destination?</h2>
+            <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Our travel experts will help you plan the perfect trip to any of these amazing destinations
+            </p>
+            <a href="contact.html" class="inline-block px-10 py-4 bg-white text-purple-600 rounded-full font-bold hover:shadow-lg transition">
+                Plan Your Trip
+            </a>
+        </div>
+    </section>
+    
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-3 z-40">
+        <a href="https://wa.me/9779764337631?text=Hello%20D.M.%20Travels,%20I%20would%20like%20to%20book%20a%20destination%20tour" 
+           target="_blank" 
+           class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition transform hover:scale-110"
+           title="WhatsApp">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="tel:+9779764337631" 
+           class="w-14 h-14 bg-purple-600 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-purple-700 transition transform hover:scale-110"
+           title="Call Us">
+            <i class="fas fa-phone text-2xl"></i>
+        </a>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-globe text-2xl text-purple-500"></i>
+                        <span class="text-xl font-bold">D.M. Travels</span>
+                    </div>
+                    <p class="text-gray-400">Making travel dreams come true since 2009.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="destinations.html" class="hover:text-white transition">Destinations</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition">Flight Booking</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Hotel Booking</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Tour Packages</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Visa Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow & Contact Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/9779764337631" target="_blank" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+9779764337631" class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-700 transition" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:info.dmtravels@gmail.com" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="text-center text-gray-400">
+                    <p>&copy; 2024 D.M. Travels & Tours Pvt. Ltd. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
