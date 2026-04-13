@@ -74,10 +74,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3 cursor-pointer">
+                <a href="index.html" class="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition">
                     <img src="assets/logo.png" alt="D.M. Travels Logo" class="h-12 w-12">
                     <span class="text-xl font-bold text-gray-900">D.M. Travels</span>
-                </div>
+                </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
@@ -88,12 +88,7 @@
                     <a href="contact.html" class="text-gray-700 hover:text-blue-900 transition font-500">Contact</a>
                 </div>
                 
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <button class="px-8 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full font-600 hover:shadow-lg transition">
-                        Book Now
-                    </button>
-                </div>
+
                 
                 <!-- Mobile Menu Button -->
                 <button @click="open = !open" class="md:hidden">
